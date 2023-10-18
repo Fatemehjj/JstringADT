@@ -3,4 +3,5 @@ public interface Jmethods {
     String reverse(String str);
     String firstChar(String str);
     String lastChar(String str);
+    Boolean isBalanced(String str);
 }
