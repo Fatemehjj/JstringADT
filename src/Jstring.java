@@ -26,4 +26,10 @@ public class Jstring implements Jmethods {
         int len = size(str);
         return String.valueOf(str.charAt(len-1));
     }
+
+    @Override
+    public Boolean isBalanced(String str) {
+        String reverse = reverse(str);
+        return reverse.equals(str);
+    }
 }
