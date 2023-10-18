@@ -6,5 +6,6 @@ public class Test {
         System.out.println(jstring.reverse(str));
         System.out.println(jstring.firstChar(str));
         System.out.println(jstring.lastChar(str));
+        System.out.println(jstring.isBalanced(str));
     }
 }
