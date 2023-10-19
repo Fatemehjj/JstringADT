@@ -1,3 +1,4 @@
 # JstringADT
-implement Jstring ADT
-it's for first question of DSA assignment.
+implementing Jstring ADT.
+
+it's for the first question of DSA assignment.
