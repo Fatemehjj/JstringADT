@@ -1,35 +1,45 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Jstring implements Jmethods {
+private List<String> jAdd = new ArrayList<>();
     @Override
-    public int size(String str){
+    public int size() {
         int size=0;
-        for (Character s : str.toCharArray()){
+        for (String s : jAdd){
              size++;
         }
         return size;
     }
     @Override
-    public String reverse(String str) {
-        int len = size(str);
+    public String reverse() {
+        int len = size()-1;
         String newJstring = "";
-        for (int i=len-1; i>=0; i--){
-            newJstring += str.charAt(i);
-        }
+       for (String str : jAdd){
+           newJstring += "[ "+jAdd.get(len)+" ]";
+           len--;
+       }
         return newJstring;
     }
     @Override
-    public String firstChar(String str) {
-        return String.valueOf(str.charAt(0));
+    public String firstStr() {
+        return jAdd.get(0);
     }
-
     @Override
-    public String lastChar(String str) {
-        int len = size(str);
-        return String.valueOf(str.charAt(len-1));
+    public String lastStr() {
+        int len = size()-1;
+        return jAdd.get(len);
     }
-
     @Override
-    public Boolean isBalanced(String str) {
-        String reverse = reverse(str);
-        return reverse.equals(str);
+    public void add(String str) {
+        jAdd.add(str);
+    }
+    @Override
+    public String getAll() {
+        String newJstr = "";
+        for (String s : jAdd){
+            newJstr += "[ "+s+" ]";
+        }
+        return newJstr;
     }
 }
